@@ -1,0 +1,12 @@
+.body-clone {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+}
+.father {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}

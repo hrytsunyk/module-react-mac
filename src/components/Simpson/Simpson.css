@@ -1,4 +1,33 @@
+
 .simpson {
     width: 500px;
-    margin: 500px;
+    height: 700px;
+    background: cornflowerblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 50px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+img {
+    width: 150px;
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+    background: #ffee7d;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    font-size: 18px;
+    text-align: center;
 }
