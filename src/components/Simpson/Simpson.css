@@ -7,7 +7,6 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    /*border: 1px solid black;*/
     border-radius: 5px;
     margin: 50px;
     padding: 30px;
@@ -33,5 +32,4 @@ img {
     font-size: 18px;
     text-align: center;
     color: #1c190d;
-
 }
