@@ -1,12 +1,14 @@
 .body-clone {
     width: 100vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    background: #07132f;
 }
 .father {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
 }

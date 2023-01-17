@@ -2,19 +2,20 @@
 .simpson {
     width: 500px;
     height: 700px;
-    background: cornflowerblue;
+    background: #395e9b;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
+    border-radius: 5px;
     margin: 50px;
     padding: 30px;
     box-sizing: border-box;
 }
 
 img {
-    width: 150px;
+    width: 130px;
 }
 
 .img {
@@ -25,9 +26,12 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: #ffee7d 1px 1px 50px;
 }
 
 * {
     font-size: 18px;
     text-align: center;
+    color: #1c190d;
+
 }
