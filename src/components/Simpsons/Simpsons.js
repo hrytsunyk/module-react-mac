@@ -83,4 +83,4 @@ const Simpsons = () => {
     );
 };
 
-export default Simpsons;
+export {Simpsons};
