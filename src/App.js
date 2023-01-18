@@ -1,7 +1,9 @@
+import {Users} from "./componets/Users/Users";
+
 const App = () => {
     return (
         <div>
-            hw2
+        <Users/>
         </div>
     );
 };
