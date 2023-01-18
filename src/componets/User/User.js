@@ -1,8 +1,12 @@
-const User = ({user}) => {
-    const {id, name, username, email, address, street, suite, city, zip,} = user;
+const User = ({user, setUserAddress}) => {
+    const {id, name, username, email, address:{zipcode,  street, suite, city}} = user;
     return (
         <div>
-            <div>{id}. {name}</div>
+            <div>
+                {id}. {name}
+
+            </div>
+                <button onClick={setUserAddress(user.address)}>get address</button>
         </div>
     );
 };
