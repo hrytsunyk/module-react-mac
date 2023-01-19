@@ -6,8 +6,7 @@ const Launches = () => {
 
 useEffect(()=> {
 
-    getApi().then(value => console.log(value.data)).then(value() =>
-    console.log(value);)
+    getApi().then(value => console.log(value.data)).then(value => console.log(value))
 })
 
     return (
