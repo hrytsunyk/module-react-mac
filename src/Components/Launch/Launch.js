@@ -1,9 +1,6 @@
 const Launch = ({launch}) => {
 
-    const {
-        flight_number, mission_name,
-        launch_year, links: {mission_patch_small},
-        details } = launch;
+    const {flight_number, mission_name, launch_year, links: {mission_patch_small}, details} = launch;
 
 
     return (
