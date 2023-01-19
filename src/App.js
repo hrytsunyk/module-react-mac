@@ -1,7 +1,7 @@
 const App = () => {
     return (
         <div>
-            App
+            ls2hw2
         </div>
     );
 };
