@@ -1,26 +1,32 @@
 import {useEffect, useState} from "react";
-import axios from "axios";
-import {userServices} from "../services/userServices";
+
+import {userServices} from "../services";
+import {UserAddress} from "../User/UserAddress";
 import {User} from "../User/User";
 
+
+
 const Users = () => {
-    const [user,setUser] = useState([]);
-    const [count,setCount] = useState(0);
 
-    const [userAddress, setUserAddress] = useState(null)
+    const [users, setUsers] = useState([]);
+    const [count, setCount] = useState(0);
 
-    useEffect(() => {
-        userServices.getAll()
-            .then((user) => user.data)
-            .then((user) => setUser([...user]))
-    }, [count])
+    const [address, setAddress] = useState(null);
+
+
+    useEffect(()=>{
+            userServices.getAll().then(user => user.data).then(user => setUsers([...user]))
+        }, [count]);
 
     return (
+
         <div>
-            <div>Info: {userAddress && <User user={userAddress}/>}</div>
-            <div>{user.map((user) => <User key={user.id} user={user} setUserAddress={setUserAddress}/>)}</div>
+            <h2>Address info:</h2>
+            <div>{address && <UserAddress user={address}/>}</div>
+            <hr/>
+            {users.map(user => <User key={user.id} user={user} setAddress={setAddress}/>)}
         </div>
     );
 };
 
-export {Users,};
+export {Users};
