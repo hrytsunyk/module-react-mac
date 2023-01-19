@@ -1,4 +1,5 @@
-import {Launches} from "./Components/Launches/Launches";
+
+import {Launches} from "./Components";
 
 const App = () => {
     return (
