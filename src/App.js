@@ -1,7 +1,9 @@
+import {Launches} from "./Components/Launches/Launches";
+
 const App = () => {
     return (
         <div>
-            ls2hw22
+            <Launches/>
         </div>
     );
 };
