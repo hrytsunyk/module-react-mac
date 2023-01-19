@@ -1,10 +1,20 @@
-const Launch = (launch) => {
+const Launch = ({launch}) => {
+
+    const {
+        flight_number, mission_name,
+        launch_year, links: {mission_patch_small},
+        details } = launch;
+
 
     return (
-        <div>
-            {/*<h4>Mission name: {mission_name}</h4>*/}
-            {/*<h4>Launch year: {launch_year}</h4>*/}
-            {/*<h4>Mission patch: {mission_patch_small}</h4>*/}
+
+        <div className={'starship'}>
+
+            <h3>{flight_number}. Name: {mission_name} | Launch year: {launch_year}</h3>
+
+            <h4>Details: {details}</h4>
+
+            <img src={mission_patch_small} alt={mission_name}/>
 
         </div>
     );
