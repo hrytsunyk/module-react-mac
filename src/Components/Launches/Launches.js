@@ -9,11 +9,10 @@ import {Launch} from "../Launch/Launch";
 const Launches = () => {
 
     const [launches, setLaunches] = useState([])
-    const [count, setCount] = useState(0)
 
     useEffect(() => {
         getAll.then(launches => launches.data).then(launches => setLaunches([...launches]))
-    }, [count])
+    }, [])
 
     return (
         <div className={'father'}>
