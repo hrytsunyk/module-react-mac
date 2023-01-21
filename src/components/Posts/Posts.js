@@ -1,6 +1,9 @@
 
-const Posts = ({posts}) => {
-const {id, userID, title} = posts;
+const Posts = ({posts,}) => {
+
+    const {id, userId: userIdPost, title} = posts;
+
+
     return (
         <div>
             <h6>{id}. {title}</h6>
