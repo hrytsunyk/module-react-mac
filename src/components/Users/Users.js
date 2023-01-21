@@ -13,10 +13,11 @@ const Users = () => {
         getService.getUsers().then(user => user.data)
             .then(user => setUsers([...user]))
 
+
     }, []);
 
     useEffect(() => {
-        getService.getPosts().then(post => post.data).then(post => setPosts([...post]))
+        getService.getPostId().then(posts => posts.data).then(posts => setPosts([...posts]))
     },[])
 
 
