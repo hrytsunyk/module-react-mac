@@ -1,7 +1,11 @@
+import {Users} from "./components/Users/Users";
+import {Posts} from "./components/Posts/Posts";
+
 const App = () => {
     return (
         <div>
-            advance
+            <Users/>
+            {/*<Posts/>*/}
         </div>
     );
 };
