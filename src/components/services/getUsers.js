@@ -1,0 +1,4 @@
+
+const getUsers = {
+    getUses: '/users'
+}
