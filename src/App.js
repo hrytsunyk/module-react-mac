@@ -5,7 +5,7 @@ const App = () => {
         <div>
             <CarForm/>
             <hr/>
-            <Cars/>
+            <Cars />
         </div>
     );
 };

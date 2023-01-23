@@ -13,7 +13,7 @@ const Cars = () => {
     })
 
     return (
-        <div>
+        <div className={'cars'}>
             {cars.map(car => <Car key={car.id} car={car}/>)}
         </div>
     );

@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 code {
@@ -15,6 +18,19 @@ code {
 .car {
   width: 150px;
   height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   border: 1px solid black;
   margin: 5px;
+  text-align: center;
+}
+
+.cars {
+  width: 500px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
 }
