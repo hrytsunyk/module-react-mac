@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.car {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  margin: 5px;
+}
