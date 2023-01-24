@@ -34,3 +34,10 @@ code {
   align-items: center;
   flex-wrap: wrap;
 }
+
+.father {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

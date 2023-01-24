@@ -2,7 +2,7 @@ import {CarForm, Cars} from "./components";
 
 const App = () => {
     return (
-        <div>
+        <div className={'father'}>
             <CarForm/>
             <hr/>
             <Cars />

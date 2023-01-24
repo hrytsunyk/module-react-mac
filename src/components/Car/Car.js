@@ -4,10 +4,10 @@ const Car = ({car}) => {
 
     return (
         <div className={'car'}>
-            <div>id: {id}</div>
-            <div>brand: {brand}</div>
-            <div>price: {price}</div>
-            <div>year: {year}</div>
+            <div><b>id:</b> {id}</div>
+            <div><b>brand:</b> {brand}</div>
+            <div><b>price:</b> {price}</div>
+            <div><b>year:</b> {year}</div>
         </div>
     );
 };
