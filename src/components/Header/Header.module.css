@@ -1,0 +1,27 @@
+.header {
+    width: 100%;
+    min-height: 50px;
+    background: #466293;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.h6Block {
+    background: #ffe600;
+    width: 200px;
+    height: 50px;
+    transform: skew(-30deg);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h6 {
+    transform: skew(30deg);
+    font-size: 15px;
+    font-family: Helvetica Neue, Helvetica, sans-serif;;
+}
+
