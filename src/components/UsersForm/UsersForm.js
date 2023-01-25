@@ -1,13 +1,19 @@
 import {putForm} from "axios";
+import {useForm} from "react-hook-form";
 
 const UsersForm = () => {
 
-    const [register, handleSubmit]= useF()
+    const {register, handleSubmit, watch, formState:{errors, isValid}, getValues}= useForm()
 
+
+    function submit() {
+
+    }
 
     return (
-        <form onSubmit={}>
-            <input type="text"/>
+        <form onSubmit={handleSubmit(submit)}>
+            <input type="text" {...register('name')}/>
+            <button>new user</button>
         </form>
     );
 };
