@@ -3,11 +3,12 @@ import {postService} from "../../services";
 
 const PostForm = ({setPosts}) => {
 
-const {register, handleSubmit, reset, getValues} = useForm()
+const {register, handleSubmit, reset } = useForm()
 
     function submit(dataInput) {
     postService.newPost(dataInput)
-        .then(({data}) => setPosts([...data]) )
+        .then(({data}) => setPosts((prev) => [...prev, data]) );
+        reset()
 
     }
 

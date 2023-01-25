@@ -1,6 +1,6 @@
 const Post = ({post}) => {
 
-    const {id, name} = value;
+    const {id, name} = post;
     return (
         <div>
             <div>{id}. {name}</div>
