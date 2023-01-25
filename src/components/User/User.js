@@ -1,7 +1,10 @@
-const User = () => {
+const User = ({user}) => {
+
+    const {id, name} = user;
+
     return (
         <div>
-            User
+            <div>{id}. {name}</div>
         </div>
     );
 };
