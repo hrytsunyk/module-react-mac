@@ -2,11 +2,11 @@ import {putForm} from "axios";
 
 const UsersForm = () => {
 
-    putForm()
+    const [register, handleSubmit]= useF()
 
 
     return (
-        <form>
+        <form onSubmit={}>
             <input type="text"/>
         </form>
     );
