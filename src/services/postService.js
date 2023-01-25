@@ -1,7 +1,11 @@
 import {axiosService} from "./axiosService";
-import {apiURLS} from "./"
+import {urlPost} from "../components/apiURLS";
 
-const postService ={
+const postService = {
+    allPosts: ()=> axiosService.get(urlPost.comments),
+    newPost: (data) => axiosService.post(data)
+}
 
-    allPosts: axiosService.get()
+export {
+    postService
 }
