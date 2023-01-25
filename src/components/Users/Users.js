@@ -7,7 +7,7 @@ const Users = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(()=> {
-        userService.getAll().then({data} = console.log(data) )
+        userService.then({data} = console.log(data) )
     })
 
     return (
