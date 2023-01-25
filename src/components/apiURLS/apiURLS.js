@@ -1,4 +1,4 @@
-const baseURL = 'http://jsonplaceholder.typicode.com';
+const baseURL = 'https://jsonplaceholder.typicode.com';
 
 const urlPost = {
     comments: 'post/1/comments'
