@@ -6,32 +6,43 @@ import {useEffect} from "react";
 
 const CarForm = ({setCars, update}) => {
 
-    const {register, handleSubmit, reset, formState:{errors, isValid}, setValue} = useForm({
+    const {register, handleSubmit, reset, formState: {errors, isValid}, setValue} = useForm({
         mode: "all", resolver: joiResolver(carValidator)
     });
 
-    useEffect(()=> {
+    useEffect(() => {
+
         if (update) {
-           setValue('brand', update.brand)
-           setValue('price', update.price)
-           setValue('year', update.year)
+            setValue('brand', update.brand)
+            setValue('price', update.price)
+            setValue('year', update.year)
         }
-        // console.log(update)
 
     }, [update])
 
     const submit = async (inputsData) => {
-// const {data} = await carService.create(data);
-const {data} = await carService.create(inputsData);
-        // setCars(prev => );
-        reset();
-        console.log(inputsData)
+        const {data} = await carService.create(inputsData);
+        setCars(prev => [...prev, data])
+        reset()
+    };
 
-    }
+    const updateCar = async (car) => {
+        const {data} = await carService.updateById(update.id, car);
+        reset()
 
+    };
+
+    const deleteCar = async (car) => {
+        await carService.deleteById(update.id);
+
+    };
 
     return (
-        <form className={'inputs'} onSubmit={handleSubmit(submit)}>
+
+        <form className={'inputs'} onSubmit={
+            handleSubmit(update ? updateCar : submit)
+        }>
+
             <input type="text" placeholder={'brand'} {...register('brand')}/>
             <input type="text" placeholder={'price'} {...register('price')} />
             <input type="text" placeholder={'year'} {...register('year')}/>
@@ -41,7 +52,7 @@ const {data} = await carService.create(inputsData);
             {errors.price && <div>{errors.price.message}</div>}
 
 
-            <button disabled={!isValid}>save</button>
+            <button disabled={!isValid}>{update ? 'update' : 'create'}</button>
         </form>
     );
 };

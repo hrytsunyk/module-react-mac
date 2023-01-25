@@ -1,9 +1,12 @@
+import {carService} from "../../services";
+
 const Car = ({car, setUpdate}) => {
 
     const {id, brand, price, year} = car;
 
     return (
         <div className={'car'}>
+
             <div><b>id:</b> {id}</div>
             <div><b>brand:</b> {brand}</div>
             <div><b>price:</b> {price}</div>
@@ -11,8 +14,9 @@ const Car = ({car, setUpdate}) => {
 
             <span>
                 <button onClick={() => setUpdate(car)}>update</button>
-                <button>delete</button>
+                <button onClick={() => carService.deleteById(id)}>delete</button>
             </span>
+
         </div>
     );
 };
