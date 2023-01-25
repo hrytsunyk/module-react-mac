@@ -5,9 +5,9 @@ const PostForm = ({setPosts}) => {
 
 const {register, handleSubmit, reset } = useForm()
 
-    function submit(dataInput) {
-    postService.newPost(dataInput)
-        .then(({data}) => setPosts((prev) => [...prev, data]) );
+    const  submit = async (data) => {
+   await postService.newPost(data)
+        .then(({data}) => setPosts((prev) => [...prev, data]));
         reset()
 
     }
