@@ -1,4 +1,4 @@
-const Car = ({car}) => {
+const Car = ({car, setUpdate}) => {
 
     const {id, brand, price, year} = car;
 
@@ -8,6 +8,11 @@ const Car = ({car}) => {
             <div><b>brand:</b> {brand}</div>
             <div><b>price:</b> {price}</div>
             <div><b>year:</b> {year}</div>
+
+            <span>
+                <button onClick={() => setUpdate(car)}>update</button>
+                <button>delete</button>
+            </span>
         </div>
     );
 };
