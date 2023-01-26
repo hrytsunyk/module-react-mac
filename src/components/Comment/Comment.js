@@ -18,7 +18,7 @@ const Comment = ({comment}) => {
             </div>
 
             <Link to={postId.toString()}>
-                <button>see post</button>
+                <button>show post</button>
             </Link>
 
         </form>
