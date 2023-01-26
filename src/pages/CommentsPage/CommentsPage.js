@@ -1,4 +1,4 @@
-import {Comments} from "../../components";
+import {Comments, PostDetails} from "../../components";
 
 import css from "./CommentsPage.module.css"
 import {Posts} from "../../components/Posts/Posts";

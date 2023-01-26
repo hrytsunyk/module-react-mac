@@ -4,17 +4,24 @@ import {requestServ} from "../../services";
 
 const PostDetails = ({postId}) => {
 
-    const [post, setPost] = useState([])
+    const [post, setPost] = useState(null);
 
+    useEffect(()=> {
+        requestServ.getPostByID(postId).then(({data}) => setPost(data))
+    }, [postId])
 
-
-    useEffect(() => {
-        requestServ.getPostByID(postId).then(({data}) => setPost([...data]))
-    })
+    console.log(post);
     return (
         <div>
             {post &&
-                <PostDetails/>
+                <>
+
+                    <div>
+                        <div>id: {post.id}</div>
+                        <div>name: {post.title}</div>
+                    </div>
+
+                </>
 
             }
         </div>
