@@ -29,8 +29,8 @@ const App = () => {
                     <Route path={'*'} element={<NotFoundPage/>}/>
 
                     <Route path={'notfound'} element={<NotFoundPage/>}/>
-
                 </Route>
+
             </Routes>
 
         </div>
