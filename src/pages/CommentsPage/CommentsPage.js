@@ -1,7 +1,11 @@
+import {Comments} from "../../components";
+
+import css from "./CommentsPage.module.css"
+
 const CommentsPage = () => {
     return (
-        <div>
-            CommentsPage
+        <div className={css.CommentsPage}>
+            <Comments/>
         </div>
     );
 };

@@ -13,7 +13,7 @@
 }
 
 .h6Block {
-    background: #ffe600;
+    background: #22314b;
     width: 200px;
     height: 50px;
     transform: skew(-30deg);
@@ -27,15 +27,18 @@ h6 {
     transform: skew(30deg);
     font-size: 15px;
     font-family: Helvetica Neue, Helvetica, sans-serif;;
+    color: #ffe600;
+
 
 }
 
 .Header a{
     text-decoration: none;
     color: #466293;
+
 }
 
-.Header a:active{
-    text-decoration: none;
-    color: #000000;
+.Header a[class='active']{
+    text-decoration: underline 3px solid red;
+    color: #ffe600;
 }
