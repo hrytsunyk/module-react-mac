@@ -1,6 +1,6 @@
-import css from './Body.module.css';
+import css from './HomePage.module.css';
 
-const Body = () => {
+const HomePage = () => {
     return (
         <div className={css.bodyData}>
             <h3>Hello Okten</h3>
@@ -8,4 +8,4 @@ const Body = () => {
     );
 };
 
-export {Body};
+export {HomePage};

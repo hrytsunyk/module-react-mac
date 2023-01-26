@@ -1,4 +1,4 @@
-.header {
+.Header {
     width: 100%;
     min-height: 50px;
     background: #466293;
@@ -25,3 +25,7 @@ h6 {
     font-family: Helvetica Neue, Helvetica, sans-serif;;
 }
 
+a {
+    text-decoration: none;
+    color: #466293;
+}
