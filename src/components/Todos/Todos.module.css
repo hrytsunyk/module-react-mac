@@ -1,0 +1,9 @@
+.Todos {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5px;
+    text-align: center;
+}

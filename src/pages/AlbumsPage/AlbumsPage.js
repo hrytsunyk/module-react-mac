@@ -1,7 +1,11 @@
+import {Albums} from "../../components";
+
+import css from "./AlbumsPage.module.css";
+
 const AlbumsPage = () => {
     return (
-        <div>
-            AlbumsPage
+        <div className={css.Albums}>
+            <Albums/>
         </div>
     );
 };

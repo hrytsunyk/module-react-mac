@@ -1,0 +1,16 @@
+.Todo {
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    text-align: center;
+    background: #466293;
+}
+
+h4 {
+    margin: 1px;
+    color: white;
+}
