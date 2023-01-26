@@ -5,3 +5,4 @@ export * from './Comments/Comments';
 export * from './Todo/Todo';
 export * from './Todos/Todos';
 export * from './Header/Header';
+export * from "./PostDetails/PostDetails"
