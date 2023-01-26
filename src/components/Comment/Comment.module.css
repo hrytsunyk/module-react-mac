@@ -1,20 +1,29 @@
 .Comment {
-    display: flex ;
-    flex-direction: column;
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 200px;
     height: 200px;
     margin: 5px;
     text-align: center;
-    background: #466293;
+    background: #22314b;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-h4 {
+.titleBlock {
+    width: 190px;
+    height: 150px;
     margin: 1px;
     color: white;
 }
 
 button {
+    width: 70px;
+    height: 30px;
     margin: 10px;
+    background: #ead528;
+    cursor: pointer;
 }

@@ -1,5 +1,5 @@
 .Album {
-    display: flex ;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -7,7 +7,8 @@
     height: 200px;
     margin: 5px;
     text-align: center;
-    background: #466293;
+    background: #22314b;
+    border-radius: 5px;
 }
 
 h4 {

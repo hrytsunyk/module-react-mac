@@ -21,8 +21,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
+
 h6 {
     transform: skew(30deg);
     font-size: 15px;
@@ -32,13 +32,13 @@ h6 {
 
 }
 
-.Header a{
+.Header a {
     text-decoration: none;
     color: #466293;
 
 }
 
-.Header a[class='active']{
+.Header a[class='active'] {
     text-decoration: underline 3px solid red;
     color: #ffe600;
 }

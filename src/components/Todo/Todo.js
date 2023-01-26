@@ -6,9 +6,11 @@ const Todo = ({todo}) => {
 
     return (
         <div className={css.Todo}>
+
             <h4>id: {id}</h4>
             <h4>title: {title}</h4>
             <h4>completed: {completed.toString()}</h4>
+
         </div>
     );
 };

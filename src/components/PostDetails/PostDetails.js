@@ -1,28 +1,27 @@
-import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
+
 import {requestServ} from "../../services";
+import css from "./PostDetails.module.css"
+
 
 const PostDetails = ({postId}) => {
 
     const [post, setPost] = useState(null);
 
-    useEffect(()=> {
+    useEffect(() => {
         requestServ.getPostByID(postId).then(({data}) => setPost(data))
     }, [postId])
 
-    console.log(post);
+
     return (
-        <div>
+        <div className={css.PostDetails}>
+
             {post &&
-                <>
 
-                    <div>
-                        <div>id: {post.id}</div>
-                        <div>name: {post.title}</div>
-                    </div>
-
-                </>
-
+                <div>
+                    <div>id: {post.id}</div>
+                    <div>name: {post.title}</div>
+                </div>
             }
         </div>
     );
