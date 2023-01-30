@@ -3,7 +3,7 @@ import {User} from "../../components/User/User";
 const HomePage = () => {
     return (
         <div>
-            <User/>
+            Hello World
         </div>
     );
 };

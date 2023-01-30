@@ -1,5 +1,7 @@
 .Header {
-    width: 100vh;
-    height: 35px;
-    color: cornflowerblue;
+    width: 100%;
+    height: 50px;
+    background: cornflowerblue;
+    display: flex;
+    justify-content: space-evenly;
 }

@@ -1,10 +1,10 @@
 const baseURL = 'https://jsonplaceholder.typicode.com';
 
-const get = {
+const apiURL = {
     users: "/users"
 };
 
 export {
     baseURL,
-    get
+    apiURL
 }

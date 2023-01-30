@@ -6,10 +6,10 @@ const App = () => {
     return (
         <div>
             <Routes>
-                <Route path={'/'} element={MainLayout}>
+                <Route path={'/'} element={<MainLayout/>}>
 
-                    <Route index element={HomePage}/>
-                    <Route path={'users'} element={UsersPage}/>
+                    <Route index element={<HomePage/>}/>
+                    <Route path={'users'} element={<UsersPage/>}/>
 
                 </Route>
             </Routes>
