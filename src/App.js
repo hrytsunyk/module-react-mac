@@ -1,7 +1,7 @@
 const App = () => {
     return (
         <div>
-            Appd
+            App
         </div>
     );
 };
