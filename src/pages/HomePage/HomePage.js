@@ -1,7 +1,9 @@
+import {User} from "../../components/User/User";
+
 const HomePage = () => {
     return (
         <div>
-            HomePage
+            <User/>
         </div>
     );
 };

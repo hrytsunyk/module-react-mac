@@ -1,4 +1,4 @@
-import {axiosService} from "../services/axiosService";
+import {axiosService} from "./axiosService";
 
 const usersServices = axiosService.get(get.users);
 

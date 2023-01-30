@@ -9,7 +9,7 @@ const App = () => {
                 <Route path={'/'} element={MainLayout}>
 
                     <Route index element={HomePage}/>
-                    <Route path={'/'} element={UsersPage}/>
+                    <Route path={'users'} element={UsersPage}/>
 
                 </Route>
             </Routes>
