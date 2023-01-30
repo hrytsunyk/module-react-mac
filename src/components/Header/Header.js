@@ -1,7 +1,9 @@
+import css from "./Header.module.css";
+
 const Header = () => {
     return (
-        <div>
-            Header
+        <div className={css.Header}>
+
         </div>
     );
 };
