@@ -1,4 +1,3 @@
-import {User} from "../../components/User/User";
 import {Users} from "../../components/Users/Users";
 import {Inputs} from "../../components/Inputs";
 
@@ -21,7 +20,7 @@ const UsersPage = () => {
     return (
         <div className={css.UserPage}>
             <Inputs newUser={newUser} setUsers={setUsers} />
-            <Users users={users}/>
+            <Users users={users} setNewUser={setNewUser}/>
         </div>
     );
 };

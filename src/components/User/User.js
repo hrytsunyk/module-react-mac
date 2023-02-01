@@ -1,9 +1,8 @@
-import {useForm} from "react-hook-form";
 
 import css from './User.module.css';
 import {usersServices} from "../../services";
 
-const User = ({user}) => {
+const User = ({user, setNewUser}) => {
 
     const {id, name, address:{city, street}} = user;
 
@@ -16,7 +15,7 @@ const User = ({user}) => {
                 <h4>{city} - {street}</h4>
 
                 <div>
-                    <button onClick={}>update</button>
+                    <button onClick={()=>setNewUser}>update</button>
                     <button onClick={()=> usersServices.deleteById(id)}>delete</button>
                 </div>
 

@@ -1,5 +1,4 @@
 import {useForm} from "react-hook-form";
-import {logDOM} from "@testing-library/react";
 import {usersServices} from "../../services";
 import {useEffect} from "react";
 
