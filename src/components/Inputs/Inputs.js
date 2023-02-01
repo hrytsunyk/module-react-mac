@@ -14,7 +14,7 @@ const Inputs = ({setUsers, update}) => {
             getValues('street', update.street )
             console.log(update)
         }
-    })
+    }, [update])
 
     const submit = async (dataInput) => {
         const {data} = await usersServices.create(dataInput);
