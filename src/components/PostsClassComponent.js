@@ -31,8 +31,8 @@ class PostsClassComponent extends Component {
         return (
 
             <div>
-                <div>
 
+                <div>
                     <h2>Posts:</h2>
                     {this.state.posts.map(post => <div>{post.id}. {post.title}</div>)}
 
@@ -40,8 +40,8 @@ class PostsClassComponent extends Component {
 
                     <h2>Comments:</h2>
                     {this.state.comments.map(comment => <div>{comment.id}. {comment.name}</div>)}
-
                 </div>
+
             </div>
         )
 
