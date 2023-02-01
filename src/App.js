@@ -1,7 +1,9 @@
+import {PostsClassComponent} from "./components/PostsClassComponent";
+
 const App = () => {
     return (
         <div>
-            App5
+            <PostsClassComponent/>
         </div>
     );
 };
