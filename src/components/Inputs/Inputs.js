@@ -2,22 +2,22 @@ import {useForm} from "react-hook-form";
 import {usersServices} from "../../services";
 import {useEffect} from "react";
 
-const Inputs = ({setUsers, newUser }) => {
+const Inputs = ({setUsers, update }) => {
 
     const {register, handleSubmit, getValues, reset} = useForm()
 
     useEffect(()=> {
 
-        if (newUser) {
-            getValues('name', newUser.name )
-            getValues('city', newUser.city )
-            getValues('street', newUser.street )
+        if (update) {
+            getValues('name', update.name )
+            getValues('city', update.city )
+            getValues('street', update.street )
         }
     })
 
     const submit = async (dataInput) => {
         const {data} = await usersServices.create(dataInput);
-        setUsers(prev => [...prev, data])
+        setUsers(prevState => [...prevState, data])
         reset()
     }
 
@@ -29,7 +29,7 @@ const Inputs = ({setUsers, newUser }) => {
                 <input placeholder={'city'} {...register('city')}/>
                 <input placeholder={'street'} {...register('street')}/>
 
-                <button>save</button>
+                <button>{update ? 'update' : "save"}</button>
             </form>
 
     );

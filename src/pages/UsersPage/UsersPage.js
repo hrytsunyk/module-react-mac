@@ -9,7 +9,7 @@ const UsersPage = () => {
 
     const [users, setUsers] = useState([]);
 
-    const [newUser,setNewUser] = useState(null);
+    const [update,setUpdate] = useState(null);
 
 
     useEffect(() => {
@@ -19,8 +19,8 @@ const UsersPage = () => {
 
     return (
         <div className={css.UserPage}>
-            <Inputs newUser={newUser} setUsers={setUsers} />
-            <Users users={users} setNewUser={setNewUser}/>
+            <Inputs update={update} setUsers={setUsers} />
+            <Users users={users} setUpdate={setUpdate}/>
         </div>
     );
 };

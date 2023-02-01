@@ -2,7 +2,7 @@
 import css from './User.module.css';
 import {usersServices} from "../../services";
 
-const User = ({user, setNewUser}) => {
+const User = ({user, setUpdate}) => {
 
     const {id, name, address:{city, street}} = user;
 
@@ -15,7 +15,7 @@ const User = ({user, setNewUser}) => {
                 <h4>{city} - {street}</h4>
 
                 <div>
-                    <button onClick={()=>setNewUser}>update</button>
+                    <button onClick={()=>setUpdate(user)}>update</button>
                     <button onClick={()=> usersServices.deleteById(id)}>delete</button>
                 </div>
 
