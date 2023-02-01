@@ -16,7 +16,7 @@ const User = ({user}) => {
                 <h4>{city} - {street}</h4>
 
                 <div>
-                    <button onClick={()=>}>update</button>
+                    <button onClick={}>update</button>
                     <button onClick={()=> usersServices.deleteById(id)}>delete</button>
                 </div>
 

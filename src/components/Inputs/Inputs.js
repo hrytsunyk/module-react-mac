@@ -8,6 +8,7 @@ const Inputs = ({setUsers, newUser }) => {
     const {register, handleSubmit, getValues, reset} = useForm()
 
     useEffect(()=> {
+
         if (newUser) {
             getValues('name', newUser.name )
             getValues('city', newUser.city )
