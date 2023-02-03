@@ -10,7 +10,7 @@ const reducer = (state, action) => {
      switch (action.type){
          case 'ADD_CAT':
              const[lastCat] = state.cats.slice(-1);
-             const idCat = lastCat ? lastCat.id + 1 : 0;
+             const idCat = lastCat ? lastCat.id + 1 : 1;
              return {...state, cats: [...state.cats, {id: idCat, name: action.payload}]};
 
          case "DELETE_CAT":
@@ -20,7 +20,7 @@ const reducer = (state, action) => {
 
          case "ADD_DOG":
              const [lastDog] = state.dogs.slice(-1);
-             const idDog = lastDog ? lastDog.id + 1 : 0;
+             const idDog = lastDog ? lastDog.id + 1 : 1;
              return {...state, dogs:[...state.dogs, {id: idDog, name: action.payload}]};
 
          case "DELETE_DOG":
@@ -64,6 +64,7 @@ const CatsDogsReducer = () => {
                     <button onClick={createCat} >Create Cat</button>
                     <Cats cats={state.cats} />
                 </div>
+
 
                 <div>
                     <input type="text" ref={refDogs}/>
