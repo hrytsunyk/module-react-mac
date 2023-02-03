@@ -1,4 +1,4 @@
-import {CatsDogsReducer} from "../../components/CatsDogsReducer/CatsDogsReducer";
+import {CatsDogsReducer} from "../../components";
 
 
 const AnimalsPage = () => {

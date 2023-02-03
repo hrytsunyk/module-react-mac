@@ -1,10 +1,14 @@
-const Dog = ({dog}) => {
+const Dog = ({dog, dispatch}) => {
 
     const {id, name} = dog;
 
     return (
         <div>
-                {id}. {name}
+            <div>{id}. {name}</div>
+
+            <button onClick={()=>
+                dispatch({type:"DELETE_DOG", payload:id})
+            }>delete</button>
         </div>
     );
 };

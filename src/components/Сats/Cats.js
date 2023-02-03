@@ -1,12 +1,11 @@
 import {Cat} from "../Cat/Cat";
 
-const Cats = ({cats}) => {
+const Cats = ({cats, dispatch}) => {
 
-    // console.log(cats)
 
     return (
         <div>
-            {cats.map(cat => <Cat key={cat.id} cat={cat}/>)}
+            {cats.map(cat => <Cat key={cat.id} cat={cat} dispatch={dispatch}/>)}
         </div>
     );
 };
