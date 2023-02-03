@@ -1,4 +1,4 @@
-const Cat = ({cat}) => {
+const Cat = ({cat,dispatch}) => {
 
     const {id, name} = cat;
 
@@ -7,6 +7,9 @@ const Cat = ({cat}) => {
             <div>
                 {id}.{name}
             </div>
+            <button onClick={()=> dispatch(
+                {type:"DELETE_CAT",payload:id}
+            )}>delete</button>
         </div>
     );
 };
