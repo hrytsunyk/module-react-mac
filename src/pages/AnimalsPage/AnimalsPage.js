@@ -1,7 +1,7 @@
-import {CatDogReducer} from "../../components/CatDogReducer";
 import {CatsDogsReducer} from "../../components/CatsDogsReducer/CatsDogsReducer";
 
-const CatsDogsPage = () => {
+
+const AnimalsPage = () => {
     return (
         <div>
             <CatsDogsReducer/>
@@ -9,4 +9,4 @@ const CatsDogsPage = () => {
     );
 };
 
-export {CatsDogsPage};
+export {AnimalsPage};
