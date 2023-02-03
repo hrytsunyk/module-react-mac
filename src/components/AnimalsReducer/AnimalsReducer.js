@@ -14,6 +14,7 @@ const reducer = (state, action) => {
 
         case "DELETE_CAT":
             const indexCAT = state.cats.indexOf(cat => cat.id === action.payload);
+            state.cats.splice(indexCAT, 1)
             return {...state};
 
         case "ADD_DOG":
@@ -23,12 +24,16 @@ const reducer = (state, action) => {
 
         case "DELETE_DOG":
             const indexDOG = state.dogs.indexOf(dog => dog.id === action.payload);
+            state.dogs.splice(indexDOG, 1)
             return {...state};
 
         default :
+            return {...state}
     }
 
 }
+
+const initial = [];
 
 
 const AnimalsReducer = () => {
@@ -42,8 +47,9 @@ const [state, dispatch] = useReducer(reducer, {cats:[], dogs:[]}, (data)=> data)
     }
 
    const createCat =(data)=> {
-       dispatch({type:"ADD_CAT", payload:data})
+       dispatch({type:"ADD_CAT", payload: data})
        reset()
+       console.log(data)
    }
 
     return (
@@ -51,13 +57,13 @@ const [state, dispatch] = useReducer(reducer, {cats:[], dogs:[]}, (data)=> data)
             <form onSubmit={handleSubmit(createCat)}>
                 <input type="text" placeholder={"add cat"} {...register('cats')}/>
                 <button disabled={!isDirty}>Create Cat</button>
-                <Cats/>
+                <Cats cats={state.cats}/>
             </form>
 
             <form onSubmit={handleSubmit(createDog)}>
                 <input type="text" placeholder={"add dog"} {...register("dogs")}/>
                 <button disabled={!isDirty}>Create Dog</button>
-                <Dogs/>
+                <Dogs dogs={state.dogs}/>
             </form>
         </div>
     );
