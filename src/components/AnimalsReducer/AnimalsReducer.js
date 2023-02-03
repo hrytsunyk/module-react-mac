@@ -10,7 +10,22 @@ const reducer = (state, action) => {
         case "ADD_CAT":
             const [lastCat] = state.cats.slice(-1);
             const catsID = lastCat ? lastCat.id + 1 : 1;
-            return{...state.cats, cats:[...state, {id:catsID, name: payload.data}]}
+            return{...state.cats, cats:[...state.cats, {id:catsID, name: action.payload}]};
+
+        case "DELETE_CAT":
+            const indexCAT = state.cats.indexOf(cat => cat.id === action.payload);
+            return {...state};
+
+        case "ADD_DOG":
+            const [lastDog] = state.dogs.slice(-1);
+            const dogsID = lastDog ? lastDog +1 : 1;
+            return {...state, dogs:[...state.dogs, {id:dogsID, name: action.payload} ]};
+
+        case "DELETE_DOG":
+            const indexDOG = state.dogs.indexOf(dog => dog.id === action.payload);
+            return {...state};
+
+        default :
     }
 
 }
