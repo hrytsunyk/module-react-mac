@@ -1,0 +1,9 @@
+.AnimalsReducer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.hr {
+    transform: rotateY(90deg);
+}
