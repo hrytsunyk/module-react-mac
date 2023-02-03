@@ -33,7 +33,6 @@ const reducer = (state, action) => {
 
 }
 
-const initial = [];
 
 
 const AnimalsReducer = () => {
@@ -47,9 +46,10 @@ const [state, dispatch] = useReducer(reducer, {cats:[], dogs:[]}, (data)=> data)
     }
 
    const createCat =(data)=> {
-       dispatch({type:"ADD_CAT", payload: data})
-       reset()
-       console.log(data)
+       for (const dataKey in data) {
+           dispatch({type:"ADD_CAT", payload: data[dataKey]})
+       console.log(data[dataKey])
+       }
    }
 
     return (
