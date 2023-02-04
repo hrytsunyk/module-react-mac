@@ -30,17 +30,18 @@ const reducer = (state, action) => {
         default :
             return {...state}
     }
-
 }
 
 
 
 const AnimalsReducer = () => {
 
-const {register, reset, handleSubmit, formState:{isDirty}} = useForm('');
 const [state, dispatch] = useReducer(reducer, {cats:[], dogs:[]}, (data)=> data);
+const {register, reset, handleSubmit, formState:{isDirty}} = useForm();
+    console.log(state.cats)
 
-   const createDog = (data) => {
+
+    const createDog = (data) => {
 
        for (const dataKey in data) {
            if (dataKey !== 'cats'){
@@ -57,20 +58,21 @@ const [state, dispatch] = useReducer(reducer, {cats:[], dogs:[]}, (data)=> data)
                dispatch({type:"ADD_CAT", payload: data[dataKey]})
            }
        }
-       state.cats
+       reset()
    }
+
 
     return (
         <div className={css.AnimalsReducer}>
             <form  onSubmit={handleSubmit(createCat)}>
                 <input type="text" placeholder={"add cat"} {...register('cats')}/>
-                <button disabled={!isDirty}>Create Cat</button>
+                <button >Create Cat</button>
                 <Cats cats={state.cats} dispatch={dispatch}/>
             </form>
 
             <form onSubmit={handleSubmit(createDog)}>
                 <input type="text" placeholder={"add dog"} {...register("dogs")}/>
-                <button disabled={!isDirty}>Create Dog</button>
+                <button >Create Dog</button>
                 <Dogs dogs={state.dogs} dispatch={dispatch}/>
             </form>
         </div>
