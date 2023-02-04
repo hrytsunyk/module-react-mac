@@ -8,7 +8,7 @@ const Cat = ({cat,dispatch}) => {
                 {id}.{name}
             </div>
             <button onClick={()=> dispatch(
-                {type:"DELETE_CAT",payload:id}
+                {type:"DELETE_CAT", payload: id}
             )}>delete</button>
         </div>
     );

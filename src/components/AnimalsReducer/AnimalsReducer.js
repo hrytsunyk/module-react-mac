@@ -57,7 +57,7 @@ const [state, dispatch] = useReducer(reducer, {cats:[], dogs:[]}, (data)=> data)
                dispatch({type:"ADD_CAT", payload: data[dataKey]})
            }
        }
-       reset()
+       state.cats
    }
 
     return (
