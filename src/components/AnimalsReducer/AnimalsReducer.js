@@ -1,9 +1,11 @@
+import {useForm} from "react-hook-form";
+import {useReducer} from "react";
+
 import {Cats} from "../Cats/Cats";
 import {Dogs} from "../Dogs/Dogs";
 
 import css from "./AnimalsReducer.module.css";
-import {useForm} from "react-hook-form";
-import {useReducer} from "react";
+
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -13,8 +15,8 @@ const reducer = (state, action) => {
             return{...state, cats:[...state.cats, {id:catsID, name: action.payload}]};
 
         case "DELETE_CAT":
-            const indexCAT = state.cats.indexOf(cat => cat.id === action.payload);
-            state.cats.splice(indexCAT, 1)
+            const indexCat = state.cats.indexOf(cat => cat.id === action.payload);
+            state.cats.splice(indexCat, 1)
             return {...state};
 
         case "ADD_DOG":
@@ -23,8 +25,8 @@ const reducer = (state, action) => {
             return {...state, dogs:[...state.dogs, {id:dogsID, name: action.payload}]};
 
         case "DELETE_DOG":
-            const indexDOG = state.dogs.indexOf(dog => dog.id === action.payload);
-            state.dogs.splice(indexDOG, 1)
+            const indexDog = state.dogs.indexOf(dog => dog.id === action.payload);
+            state.dogs.splice(indexDog, 1)
             return {...state};
 
         default :
@@ -37,11 +39,10 @@ const reducer = (state, action) => {
 const AnimalsReducer = () => {
 
 const [state, dispatch] = useReducer(reducer, {cats:[], dogs:[]}, (data)=> data);
-const {register, reset, handleSubmit, formState:{isDirty}} = useForm();
-    console.log(state.cats)
+const {register, reset, handleSubmit} = useForm();
 
 
-    const createDog = (data) => {
+    const createDog =  (data) => {
 
        for (const dataKey in data) {
            if (dataKey !== 'cats'){
@@ -60,7 +61,7 @@ const {register, reset, handleSubmit, formState:{isDirty}} = useForm();
        }
        reset()
    }
-
+    console.log(state.cats)
 
     return (
         <div className={css.AnimalsReducer}>
