@@ -1,0 +1,17 @@
+.Home {
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 100px;
+    margin: 0;
+}
+
+.text {
+    font-size: 50px;
+    margin: 10px;
+}
