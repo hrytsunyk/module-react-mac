@@ -1,7 +1,9 @@
 import {Navigate, Route, Routes} from "react-router-dom";
-import {MainLayout} from "./layouts/MainLayout";
-import {HomePage} from "./pages/HomePage/HomePage";
-import {AnimalsReducer} from "./components/AnimalsReducer/AnimalsReducer";
+
+
+import {AnimalsReducer} from "./components";
+import {MainLayout} from "./layouts";
+import {HomePage} from "./pages";
 
 const App = () => {
     return (

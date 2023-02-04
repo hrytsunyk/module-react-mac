@@ -35,18 +35,19 @@ const reducer = (state, action) => {
 }
 
 
-
 const AnimalsReducer = () => {
 
 const [state, dispatch] = useReducer(reducer, {cats:[], dogs:[]}, (data)=> data);
 const {register, reset, handleSubmit} = useForm();
 
+console.log(state.cats)
 
     const createDog =  (data) => {
 
        for (const dataKey in data) {
            if (dataKey !== 'cats'){
                dispatch({type:"ADD_DOG", payload: data[dataKey]})
+
            }
        }
        reset()
@@ -61,7 +62,6 @@ const {register, reset, handleSubmit} = useForm();
        }
        reset()
    }
-    console.log(state.cats)
 
     return (
         <div className={css.AnimalsReducer}>
