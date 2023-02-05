@@ -1,5 +1,2 @@
 
 
-const validator = joi{
-
-}
