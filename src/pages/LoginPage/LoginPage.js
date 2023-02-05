@@ -4,11 +4,14 @@ import css from "./LoginPage.module.css";
 import {useAuthContext} from "../../hooks/useAuthContext";
 import {useLocation, useNavigate} from "react-router-dom";
 import {userValidator} from "../../validator/validator";
-import Joi from "joi";
+import {joiResolver} from "@hookform/resolvers/joi";
 
 const LoginPage = () => {
 
-   const {register, handleSubmit, reset, formState:{isValid,errors}} =  useForm({mode:"onSubmit", resolver: joiResolver(userValidator)})
+   const {register, handleSubmit, reset, formState:{isValid,errors}} =  useForm(
+       {mode:"all", resolver: joiResolver(userValidator)})
+
+
    const navigate = useNavigate();
    const {state} = useLocation();
    const {logIn} = useAuthContext();
