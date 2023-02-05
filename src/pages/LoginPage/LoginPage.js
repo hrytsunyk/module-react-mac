@@ -3,10 +3,11 @@ import {useForm} from "react-hook-form";
 import css from "./LoginPage.module.css";
 import {useAuthContext} from "../../hooks/useAuthContext";
 import {useLocation, useNavigate} from "react-router-dom";
+import {userValidator} from "../../validator/validator";
 
 const LoginPage = () => {
 
-   const {register, handleSubmit, reset, formState:{isValid,errors}} =  useForm()
+   const {register, handleSubmit, reset, formState:{isValid,errors}} =  useForm({mode:"onSubmit", resolver: userValidator})
    const navigate = useNavigate();
    const {state} = useLocation();
    const {logIn} = useAuthContext();
