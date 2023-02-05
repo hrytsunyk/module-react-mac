@@ -8,12 +8,15 @@ const LoginPage = () => {
 
    const {register, handleSubmit, reset, formState:{isValid,errors}} =  useForm()
    const navigate = useNavigate();
-   const state = useLocation();
-   const {setUser} = useAuthContext();
+   const {state} = useLocation();
+   const {logIn} = useAuthContext();
 
     const login =(data)=> {
+        const {username,password} = data;
+        logIn(username, password)
         navigate(state.pathname, {replace: true})
         console.log(data)
+
     }
 
     return (
@@ -21,7 +24,7 @@ const LoginPage = () => {
             <div className={css.form}>
                 <form onSubmit={handleSubmit(login)}>
                     <div>
-                        <div><input type="text" placeholder={'Username'} {...register('login')}/></div>
+                        <div><input type="text" placeholder={'Username'} {...register('username')}/></div>
                         <div><input type="text" placeholder={'Password'} {...register('password')}/></div>
                     </div>
                     <button className={css.button}>Login</button>

@@ -3,16 +3,44 @@
     height: 50px;
     background: cornflowerblue;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-
 }
 
 a {
     text-decoration: none;
     color: white;
+    margin: 0 20px 0 20px;
+
 }
 
 a[class='active'] {
     color: chocolate;
+}
+
+.iconName {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    background: #466293;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    /*text-align: center;*/
+}
+
+.iconButton{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.iconName:hover{
+    color: #ffee7d;
+    cursor: pointer;
 }

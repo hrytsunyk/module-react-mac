@@ -14,9 +14,10 @@ const App = () => {
                     <Route index element={<Navigate to={"home"}/>}/>
                     <Route path={'login'} element={<LoginPage/>}/>
                     <Route path={'home'} element={<HomePage/>}/>
-                    <Route path={'users'} element={<RequireAuth>
-                        <UsersPage/>
-                    </RequireAuth>}/>
+                    <Route path={'users'} element={
+                        <RequireAuth>
+                            <UsersPage/>
+                        </RequireAuth>}/>
                     <Route path={'*'} element={<UsersPage/>}/>
 
                 </Route>

@@ -10,15 +10,19 @@ const AuthProvider = ({children}) => {
 
     const [user, setUser] = useState(null);
 
-    const logIn = (loginUser) => {
-        setUser(loginUser)
+
+    const logIn = (userName) => {
+        setUser(userName)
     }
 
     const logOut = () => {
         setUser(null)
+
     }
 
-    const value = {user, logIn, logOut}
+
+
+    const value = {user,logIn, logOut}
 
     return (
         <AuthContext.Provider value={value}>
