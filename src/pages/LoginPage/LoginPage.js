@@ -31,8 +31,9 @@ const LoginPage = () => {
                     <div>
                         <div><input type="text" placeholder={'Username'} {...register('username')}/></div>
                         <div><input type="text" placeholder={'Password'} {...register('password')}/></div>
+                        {errors}
                     </div>
-                    <button className={css.button}>Login</button>
+                    <button className={css.button} disabled={!isValid}>Login</button>
                 </form>
             </div>
         </div>

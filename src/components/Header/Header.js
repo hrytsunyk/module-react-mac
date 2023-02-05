@@ -6,7 +6,6 @@ const Header = () => {
     const{user}=useAuthContext()
     const {logOut}= useAuthContext()
 
-    console.log(user)
     return (
         <div className={css.Header}>
             <NavLink to={'home'}><h3>HOME</h3></NavLink>
