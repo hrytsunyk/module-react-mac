@@ -1,5 +1,5 @@
 
 
-const validator =()=> {
+const validator = joi{
 
 }
