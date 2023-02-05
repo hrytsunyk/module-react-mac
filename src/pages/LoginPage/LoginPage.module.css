@@ -1,0 +1,21 @@
+.LoginPage {
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 200px;
+    background: #466293;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.button {
+    margin-top: 10px;
+}
