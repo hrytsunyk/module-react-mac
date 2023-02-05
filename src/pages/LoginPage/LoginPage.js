@@ -7,7 +7,7 @@ import {userValidator} from "../../validator/validator";
 
 const LoginPage = () => {
 
-   const {register, handleSubmit, reset, formState:{isValid,errors}} =  useForm({mode:"onSubmit", resolver: userValidator})
+   const {register, handleSubmit, reset, formState:{isValid,errors}} =  useForm({mode:"onSubmit", resolver:})
    const navigate = useNavigate();
    const {state} = useLocation();
    const {logIn} = useAuthContext();
