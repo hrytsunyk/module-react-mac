@@ -4,6 +4,8 @@ import {LoginPage} from "./pages/LoginPage/LoginPage";
 import {HomePage} from "./pages/HomePage/HomePage";
 import {UsersPage} from "./pages/UsersPage/UsersPage";
 import {RequireAuth} from "./hoc/RequireAuth";
+import {NotFoundPage} from "./pages/NotFoundPage/NotFoundPage";
+import {UserPage} from "./pages/UserPage/UserPage";
 
 const App = () => {
     return (
@@ -12,13 +14,19 @@ const App = () => {
                 <Route path={'/'} element={<MainLayout/>}>
 
                     <Route index element={<Navigate to={"home"}/>}/>
-                    <Route path={'login'} element={<LoginPage/>}/>
                     <Route path={'home'} element={<HomePage/>}/>
+                    <Route path={'login'} element={<LoginPage/>}/>
                     <Route path={'users'} element={
                         <RequireAuth>
                             <UsersPage/>
-                        </RequireAuth>}/>
-                    <Route path={'*'} element={<UsersPage/>}/>
+                        </RequireAuth>
+                    }/>
+                    <Route path={'about'} element={
+                        <RequireAuth>
+                            <UserPage/>
+                    </RequireAuth>
+                    }/>
+                    <Route path={'*'} element={<NotFoundPage/>}/>
 
                 </Route>
             </Routes>

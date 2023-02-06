@@ -19,3 +19,9 @@
 .button {
     margin-top: 10px;
 }
+
+.errors {
+    color: white;
+    font-size: 13px;
+    margin-top: 10px;
+}
