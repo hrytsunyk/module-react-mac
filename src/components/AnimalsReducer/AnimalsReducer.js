@@ -51,13 +51,11 @@ const AnimalsReducer = () => {
     const createCat = (data) => {
         const {cats} = data;
         dispatch({type: "ADD_CAT", payload: cats})
-
-        console.log(cats)
         reset()
     }
 
     return (
-        <div className={css.AnimalsReducer}>
+        <div className={css.AnimalsReducer} >
             <div>
                 <form onSubmit={handleSubmit(createCat)}>
                     <input type="text" placeholder={"add cat"} {...register('cats')}/>

@@ -1,9 +1,8 @@
 import {Navigate, Route, Routes} from "react-router-dom";
 
 
-import {AnimalsReducer} from "./components";
 import {MainLayout} from "./layouts";
-import {HomePage} from "./pages";
+import {AnimalsPage, HomePage} from "./pages";
 
 const App = () => {
     return (
@@ -13,7 +12,7 @@ const App = () => {
 
                     <Route index element={<Navigate to={'home'}/>} />
                     <Route path={'home'} element={<HomePage/>}/>
-                    <Route path={'animals'} element={<AnimalsReducer/>}/>
+                    <Route path={'animals'} element={<AnimalsPage/>}/>
 
                 </Route>
             </Routes>
