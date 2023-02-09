@@ -14,7 +14,7 @@ const Cars = () => {
 
     useEffect(() => {
         dispatch(carActions.allCars())
-    }, [dispatch])
+    }, [dispatch]);
 
 
     return (

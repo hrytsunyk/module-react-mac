@@ -21,6 +21,7 @@ const allCars= createAsyncThunk(
     }
 );
 
+
 const create = createAsyncThunk(
     'carSlice/create',
     async ({car},thunkAPI)=>{
@@ -46,6 +47,7 @@ const deleteCar = createAsyncThunk(
     }
 );
 
+
 const updateById= createAsyncThunk(
     "arSlice/deleteCar",
     async ({id, car}, thunkAPI)=>{
@@ -57,7 +59,6 @@ const updateById= createAsyncThunk(
         }
     }
 );
-
 
 
 
@@ -84,9 +85,11 @@ const carSlice= createSlice({
 
     }
 
-})
+});
+
 
 const {reducer:carReducer, actions:{setForUpdateCars}}= carSlice;
+
 
 const carActions = {
     allCars,
