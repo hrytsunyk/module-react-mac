@@ -4,7 +4,7 @@ import {carsURL} from "../config";
 const carService = {
     getAllCars: ()=> axiosService.get(carsURL),
     getCarByID: (id)=> axiosService.get(`${carsURL}/${id}`),
-    createCar: ()=> axiosService.post(carsURL),
+    createCar: (data)=> axiosService.post(carsURL, data),
     updateCarByID: (id, date)=> axiosService.put(`${carsURL}/${id}`, date),
     deleteCarByID: (id)=> axiosService.delete(`${carsURL}/${id}`),
 };
