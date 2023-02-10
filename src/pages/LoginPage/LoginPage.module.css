@@ -1,0 +1,20 @@
+.LoginFather {
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginBox {
+    width: 300px;
+    height: 200px;
+    background: #A58E74;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+input{
+    margin-bottom: 5px;
+}

@@ -1,0 +1,26 @@
+.Header {
+    height: 50px;
+    background: #424530;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.LoginRegisterH4 {
+    display: flex;
+    justify-content: flex-end;
+}
+h4 {
+    margin-right: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: #E09131;
+}
+
+a[class="active"] {
+    color: #FFEFCD;
+}
