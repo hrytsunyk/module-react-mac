@@ -1,7 +1,15 @@
 .Cars {
     width:100vh;
     display: flex;
-    justify-content: center;
+    justify-content:space-evenly;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.buttons {
+    width:100vh;
+    display: flex;
+    justify-content: space-between;;
+    align-items: center;
+
 }

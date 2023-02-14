@@ -1,11 +1,11 @@
-.LoginFather {
+.registerFather {
     height: 92vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.loginBox {
+.regBox {
     width: 300px;
     height: 200px;
     background: #A58E74;
@@ -21,7 +21,7 @@ input{
     margin-bottom: 5px;
 }
 
-.loginError {
+.regError {
     width: 300px;
     height: 50px;
     color: #FFEFCD;

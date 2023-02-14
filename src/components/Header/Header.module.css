@@ -18,9 +18,9 @@ h4 {
 
 a{
     text-decoration: none;
-    color: #E09131;
+    color: #FFEFCD;
 }
 
 a[class="active"] {
-    color: #FFEFCD;
+    color: #E09131;
 }
